@@ -9,4 +9,4 @@ RUN apk-install openssl python3 gcc python3-dev build-base linux-headers git bas
     && echo python3 main.py >> run.sh \
     && chmod +x run.sh
 
-ENTRYPOINT ["./run.sh"]
+ENTRYPOINT ["bash"]
