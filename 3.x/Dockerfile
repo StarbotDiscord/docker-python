@@ -6,4 +6,4 @@ RUN apk-install openssl python3 gcc python3-dev build-base linux-headers git \
     && pip3 install discord.py pluginbase psutil gitpython pyparsing pyspeedtest requests tqdm \
     && git clone https://github.com/1byte2bytes/Starbot.git
 
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["cd Starbot && python3 main.py"]
