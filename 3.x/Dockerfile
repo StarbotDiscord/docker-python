@@ -5,7 +5,8 @@ RUN apk-install openssl python3 gcc python3-dev build-base linux-headers git bas
     && apk del openssl \
     && pip3 install discord.py pluginbase psutil gitpython pyparsing pyspeedtest requests tqdm \
     && git clone https://github.com/1byte2bytes/Starbot.git /Starbot
-    && echo cd /Starbot \&\& python3 main.py > run.sh
+    && echo cd /Starbot > run.sh
+    && echo python3 main.py >> run.sh
     && chmod +x run.sh
 
 ENTRYPOINT ["./run.sh"]
